@@ -2,192 +2,438 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Best IPTV Provider USA | High Quality IPTV Services</title>
-  <meta name="description" content="Discover the best IPTV provider USA offering HD & 4K channels, stable servers, and free trial access. Learn features, benefits, and FAQs.">
-  <meta name="keywords" content="best iptv provider usa, iptv services usa, iptv free trial, usa iptv">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="Discover the best IPTV provider USA offering HD & 4K channels, stable servers, and free trial access. Learn features, benefits, and FAQs about premium IPTV services.">
+  <meta name="keywords" content="best iptv provider usa, iptv services usa, iptv free trial, usa iptv, premium iptv">
+  <title>Best IPTV Provider USA | Premium Streaming Services</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f8f9fa;
-      color: #333;
+    @keyframes slideBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    header {
-      background: #0d6efd;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    section {
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
-      background: #fff;
-      margin-bottom: 20px;
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
-    h1, h2, h3 {
-      color: #0d6efd;
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
-    /* Slider */
-    .slider {
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .animated-bg {
+      background: linear-gradient(-45deg, #1e40af, #3b82f6, #06b6d4, #0891b2);
+      background-size: 400% 400%;
+      animation: slideBackground 15s ease infinite;
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .slide-in-left {
+      animation: slideInLeft 0.8s ease-out forwards;
+    }
+
+    .slide-in-right {
+      animation: slideInRight 0.8s ease-out forwards;
+    }
+
+    .pulse-animation {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .slider-container {
       position: relative;
-      max-width: 100%;
       overflow: hidden;
-      border-radius: 10px;
-      margin: 30px 0;
+      border-radius: 1rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
     }
 
     .slides {
       display: flex;
-      transition: transform 0.8s ease-in-out;
+      transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
-    .slides img {
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .slide img {
       width: 100%;
-      flex-shrink: 0;
+      height: 500px;
+      object-fit: cover;
     }
 
-    /* CTA Button */
-    .cta {
-      display: inline-block;
-      margin: 30px 0;
-      padding: 16px 32px;
-      background: #198754;
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: background 0.3s ease;
+    .faq-item {
+      transition: all 0.3s ease;
     }
 
-    .cta:hover {
-      background: #146c43;
+    .faq-item:hover {
+      transform: translateX(10px);
+      background-color: #f0f9ff;
     }
 
-    ul {
-      padding-left: 20px;
+    .cta-button {
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #212529;
-      color: #fff;
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
     }
+
+    .feature-card {
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.9);
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .nav-arrow:hover {
+      background: white;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .nav-arrow.left { left: 20px; }
+    .nav-arrow.right { right: 20px; }
   </style>
 </head>
+<body class="bg-gray-50 text-gray-800">
 
-<body>
-
-<header>
-  <h1>Best IPTV Provider USA</h1>
-  <p>Reliable Streaming • HD & 4K Quality • Free Trial Available</p>
-</header>
-
-<section>
-  <p>
-    Choosing the <strong>best IPTV provider USA</strong> is essential for viewers who want
-    uninterrupted access to live TV, premium sports, movies, and on-demand entertainment.
-    IPTV technology delivers television content using internet protocols, providing greater
-    flexibility, affordability, and device compatibility compared to traditional cable services.
-  </p>
-
-  <p>
-    The best IPTV provider in the USA focuses on high server uptime, fast channel loading,
-    crystal-clear HD and 4K resolution, and support for popular devices such as Smart TVs,
-    Android, iOS, Firestick, MAG boxes, and desktop browsers. With IPTV, users gain access
-    to thousands of channels without long-term contracts or expensive hardware.
-  </p>
-
-  <!-- Image Slider -->
-  <div class="slider">
-    <div class="slides" id="slideTrack">
-      <img src="iptv-promotion-image-1.jpg" alt="Best IPTV Provider USA">
-      <img src="iptv-promotion-image-2.jpg" alt="USA IPTV Channels">
-      <img src="iptv-promotion-image-3.jpg" alt="IPTV Free Trial">
+  <!-- Header Section with Animated Background -->
+  <header class="animated-bg text-white py-20 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 fade-in-up">Best IPTV Provider USA</h1>
+      <p class="text-xl md:text-2xl mb-8 fade-in-up" style="animation-delay: 0.2s;">Premium Streaming • HD & 4K Quality • Free Trial Available</p>
+      <a href="#free-trial" class="cta-button inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg fade-in-up" style="animation-delay: 0.4s;">
+        🎬 Start Free Trial Now
+      </a>
     </div>
-  </div>
+  </header>
 
-  <p>
-    A major advantage of selecting the <strong>best IPTV provider USA</strong> is the ability
-    to customize your viewing experience. Whether you enjoy live sports, international channels,
-    entertainment networks, or children’s programming, IPTV services offer diverse content
-    libraries with regular updates.
-  </p>
+  <!-- Introduction Section -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <div class="slide-in-left">
+      <h2 class="text-4xl font-bold text-blue-700 mb-6">Why Choose the Best IPTV Provider USA?</h2>
+      <p class="text-lg mb-4 leading-relaxed">
+        Finding the <strong>best IPTV provider USA</strong> is crucial for viewers who demand uninterrupted access to live television, premium sports channels, blockbuster movies, and on-demand entertainment content. IPTV (Internet Protocol Television) technology revolutionizes how we consume media by delivering television content through internet protocols, providing unmatched flexibility, cost-effectiveness, and device compatibility compared to traditional cable and satellite services.
+      </p>
+      <p class="text-lg mb-4 leading-relaxed">
+        The <strong>best IPTV provider in the USA</strong> prioritizes exceptional server uptime, lightning-fast channel loading times, crystal-clear HD and 4K resolution streaming, and comprehensive support for popular devices including Smart TVs, Android smartphones and tablets, iOS devices, Amazon Firestick, MAG boxes, and desktop web browsers. With IPTV services, users gain instant access to thousands of domestic and international channels without being locked into long-term contracts or investing in expensive hardware equipment.
+      </p>
+      <p class="text-lg mb-6 leading-relaxed">
+        Modern IPTV services from the <strong>best IPTV provider USA</strong> offer advanced features such as electronic program guides (EPG), video-on-demand (VOD) libraries, catch-up TV functionality, multi-screen viewing, parental controls, and cloud DVR capabilities. This comprehensive feature set ensures that every household member can enjoy personalized entertainment experiences tailored to their preferences and schedules.
+      </p>
+    </div>
 
-  <a href="#free-trial" class="cta">Start Free Trial</a>
-</section>
+    <!-- Image Slider -->
+    <div class="slider-container my-12 fade-in-up">
+      <button class="nav-arrow left" onclick="previousSlide()">❮</button>
+      <button class="nav-arrow right" onclick="nextSlide()">❯</button>
+      <div class="slides" id="slideTrack">
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=500&fit=crop" alt="Best IPTV Provider USA - Premium Streaming">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
+            <h3 class="text-white text-3xl font-bold">Premium IPTV Streaming</h3>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1200&h=500&fit=crop" alt="USA IPTV Channels - Live TV">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
+            <h3 class="text-white text-3xl font-bold">Thousands of USA Channels</h3>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1200&h=500&fit=crop" alt="IPTV Free Trial - Test Our Service">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
+            <h3 class="text-white text-3xl font-bold">Start Your Free Trial Today</h3>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<section>
-  <h2>Why the Best IPTV Provider USA Stands Out</h2>
-  <ul>
-    <li>Stable and high-performance streaming servers</li>
-    <li>Extensive USA and international channel lineup</li>
-    <li>HD, Full HD, and 4K streaming quality</li>
-    <li>Works on multiple devices and platforms</li>
-    <li>Affordable pricing with flexible plans</li>
-  </ul>
+    <div class="slide-in-right">
+      <p class="text-lg mb-4 leading-relaxed">
+        A significant advantage of selecting the <strong>best IPTV provider USA</strong> is the unparalleled ability to customize your complete viewing experience. Whether you're passionate about live sports coverage including NFL, NBA, MLB, NHL, and international soccer leagues, enjoy premium entertainment networks, prefer international channels from around the globe, or need safe children's programming, IPTV services deliver diverse content libraries with regular updates and fresh additions.
+      </p>
+      <p class="text-lg mb-6 leading-relaxed">
+        Premium IPTV providers invest heavily in infrastructure to ensure minimal buffering, maximum uptime reliability, and exceptional customer support teams available 24/7 to assist with setup, troubleshooting, and general inquiries. The best providers also offer flexible subscription plans ranging from monthly to annual options, allowing customers to choose packages that fit their budget and viewing habits perfectly.
+      </p>
+    </div>
 
-  <p>
-    Unlike traditional TV services, IPTV allows users to stream content anywhere with a
-    stable internet connection. This flexibility makes IPTV an ideal solution for modern
-    households looking for convenience and value.
-  </p>
-</section>
+    <div class="text-center my-12">
+      <a href="#free-trial" class="cta-button inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-5 px-10 rounded-lg text-xl pulse-animation">
+        ⚡ Claim Your Free Trial Now
+      </a>
+    </div>
+  </section>
 
-<section>
-  <h2>Frequently Asked Questions (FAQ)</h2>
+  <!-- Features Section -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">What Makes Us the Best IPTV Provider USA?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="feature-card bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+          <div class="text-5xl mb-4">🎥</div>
+          <h3 class="text-2xl font-bold mb-3 text-blue-700">HD & 4K Quality</h3>
+          <p class="text-gray-700">Experience stunning picture quality with our HD, Full HD, and 4K streaming capabilities. Crystal-clear visuals for every channel and program.</p>
+        </div>
+        <div class="feature-card bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl">
+          <div class="text-5xl mb-4">📡</div>
+          <h3 class="text-2xl font-bold mb-3 text-green-700">Stable Servers</h3>
+          <p class="text-gray-700">99.9% uptime guarantee with high-performance servers strategically located across the USA for optimal streaming performance.</p>
+        </div>
+        <div class="feature-card bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl">
+          <div class="text-5xl mb-4">📱</div>
+          <h3 class="text-2xl font-bold mb-3 text-purple-700">Multi-Device Support</h3>
+          <p class="text-gray-700">Watch on Smart TVs, smartphones, tablets, Firestick, MAG boxes, and computers. One subscription, unlimited devices.</p>
+        </div>
+        <div class="feature-card bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-xl">
+          <div class="text-5xl mb-4">🌍</div>
+          <h3 class="text-2xl font-bold mb-3 text-orange-700">Global Content</h3>
+          <p class="text-gray-700">Access thousands of USA and international channels covering sports, news, entertainment, movies, and kids programming.</p>
+        </div>
+        <div class="feature-card bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-xl">
+          <div class="text-5xl mb-4">💰</div>
+          <h3 class="text-2xl font-bold mb-3 text-red-700">Affordable Pricing</h3>
+          <p class="text-gray-700">Flexible subscription plans with no hidden fees, no long-term contracts, and no expensive equipment rental charges.</p>
+        </div>
+        <div class="feature-card bg-gradient-to-br from-cyan-50 to-cyan-100 p-8 rounded-xl">
+          <div class="text-5xl mb-4">🎯</div>
+          <h3 class="text-2xl font-bold mb-3 text-cyan-700">Easy Setup</h3>
+          <p class="text-gray-700">Simple installation process with detailed guides and 24/7 customer support to get you streaming in minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h3>What is IPTV?</h3>
-  <p>
-    IPTV (Internet Protocol Television) delivers live TV and on-demand content through the
-    internet instead of satellite or cable networks.
-  </p>
+  <!-- Benefits Section -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-4xl font-bold text-blue-700 mb-8">Benefits of Choosing the Best IPTV Provider USA</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <ul class="space-y-4 text-lg">
+        <li class="flex items-start">
+          <span class="text-green-500 text-2xl mr-3">✓</span>
+          <span>Unlimited access to premium USA and international channels</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-green-500 text-2xl mr-3">✓</span>
+          <span>No buffering with high-speed dedicated servers</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-green-500 text-2xl mr-3">✓</span>
+          <span>Watch live sports events in real-time HD quality</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-green-500 text-2xl mr-3">✓</span>
+          <span>Compatible with all major streaming devices</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-green-500 text-2xl mr-3">✓</span>
+          <span>Electronic program guide (EPG) for easy navigation</span>
+        </li>
+      </ul>
+      <ul class="space-y-4 text-lg">
+        <li class="flex items-start">
+          <span class="text-green-500 text-2xl mr-3">✓</span>
+          <span>Video-on-demand library with thousands of titles</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-green-500 text-2xl mr-3">✓</span>
+          <span>Catch-up TV to watch missed programs</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-green-500 text-2xl mr-3">✓</span>
+          <span>Multi-screen support for family viewing</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-green-500 text-2xl mr-3">✓</span>
+          <span>Parental controls for safe kids content</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-green-500 text-2xl mr-3">✓</span>
+          <span>24/7 customer support and technical assistance</span>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-  <h3>Is IPTV legal in the USA?</h3>
-  <p>
-    IPTV technology itself is legal. Users should always choose reliable providers that
-    distribute content responsibly and comply with applicable regulations.
-  </p>
+  <!-- FAQ Section -->
+  <section class="bg-gradient-to-br from-blue-50 to-cyan-50 py-16" id="faq">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">Frequently Asked Questions (FAQ)</h2>
+      
+      <div class="space-y-4">
+        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">What is IPTV and how does it work?</h3>
+          <p class="text-gray-700">
+            IPTV (Internet Protocol Television) is a modern technology that delivers television content over the internet instead of traditional cable or satellite signals. The <strong>best IPTV provider USA</strong> uses advanced streaming protocols to transmit live TV channels, on-demand videos, and interactive features directly to your devices through your internet connection. This allows for greater flexibility, better quality, and more features than conventional TV services.
+          </p>
+        </div>
 
-  <h3>Do IPTV services offer a free trial?</h3>
-  <p>
-    Yes, many of the best IPTV provider USA options offer a free trial so users can evaluate
-    streaming quality, channel availability, and device compatibility.
-  </p>
+        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Is IPTV legal in the United States?</h3>
+          <p class="text-gray-700">
+            Yes, IPTV technology itself is completely legal in the United States. However, it's crucial to choose reputable providers like the <strong>best IPTV provider USA</strong> that properly license their content and comply with copyright laws. Always verify that your IPTV service distributes content legally and has the necessary broadcasting rights for the channels they offer.
+          </p>
+        </div>
 
-  <h3>Which devices are supported?</h3>
-  <p>
-    IPTV services typically support Smart TVs, Android and iOS devices, Firestick,
-    Windows, macOS, and web-based players.
-  </p>
-</section>
+        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Do you offer a free trial for IPTV services?</h3>
+          <p class="text-gray-700">
+            Absolutely! The <strong>best IPTV provider USA</strong> offers a comprehensive free trial period so potential customers can thoroughly test streaming quality, explore channel availability, verify device compatibility, and experience our premium features before committing to a subscription. This risk-free trial allows you to make an informed decision about our service quality.
+          </p>
+        </div>
 
-<footer>
-  <p>&copy; 2026 IPTVUSA-Services. All Rights Reserved.</p>
-</footer>
+        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Which devices are compatible with your IPTV service?</h3>
+          <p class="text-gray-700">
+            Our IPTV service supports an extensive range of devices including Smart TVs (Samsung, LG, Sony), Android smartphones and tablets, iOS devices (iPhone, iPad), Amazon Firestick and Fire TV, MAG boxes, Android TV boxes, Windows and macOS computers, and web-based players accessible through modern browsers. One subscription works seamlessly across all your devices.
+          </p>
+        </div>
 
-<script>
-  const slideTrack = document.getElementById("slideTrack");
-  let index = 0;
+        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">What internet speed do I need for IPTV streaming?</h3>
+          <p class="text-gray-700">
+            For optimal streaming experience with the <strong>best IPTV provider USA</strong>, we recommend a minimum internet speed of 10 Mbps for HD content and 25 Mbps or higher for 4K content. A stable connection is more important than peak speed – wired ethernet connections generally provide better stability than WiFi for consistent streaming quality.
+          </p>
+        </div>
 
-  setInterval(() => {
-    index++;
-    if (index > 2) {
-      index = 0;
+        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">How many devices can I use simultaneously?</h3>
+          <p class="text-gray-700">
+            Our subscription plans support multiple simultaneous connections, allowing different family members to watch different channels on separate devices at the same time. Specific connection limits depend on your chosen subscription tier, with premium plans offering unlimited concurrent streams throughout your household.
+          </p>
+        </div>
+
+        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">What types of channels and content are available?</h3>
+          <p class="text-gray-700">
+            The <strong>best IPTV provider USA</strong> offers thousands of channels including live sports (NFL, NBA, MLB, NHL, UFC, international soccer), premium entertainment networks, news channels, movie channels, kids programming, international channels in multiple languages, and extensive video-on-demand libraries with the latest movies and TV series.
+          </p>
+        </div>
+
+        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Is customer support available if I need help?</h3>
+          <p class="text-gray-700">
+            Yes! We provide 24/7 customer support through multiple channels including live chat, email, and ticket system. Our experienced technical team is always ready to assist with setup, troubleshooting, channel requests, billing questions, and any other concerns you may have about our IPTV service.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="animated-bg text-white py-16" id="free-trial">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Experience the Best IPTV Provider USA?</h2>
+      <p class="text-xl mb-8">Join thousands of satisfied customers enjoying premium IPTV streaming. Start your free trial today with no credit card required!</p>
+      <a href="#" class="cta-button inline-block bg-white text-blue-600 hover:text-blue-700 font-bold py-5 px-12 rounded-lg text-xl">
+        🚀 Start Your Free Trial Now
+      </a>
+      <p class="mt-6 text-lg">No commitment • Cancel anytime • 24/7 Support</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="mb-2">&copy; 2024 IPTVUSA-Services. All Rights Reserved.</p>
+      <p class="text-gray-400">Best IPTV Provider USA | Premium Streaming Services</p>
+    </div>
+  </footer>
+
+  <!-- Slider JavaScript -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideTrack = document.getElementById('slideTrack');
+    const totalSlides = slides.length;
+
+    function updateSlide() {
+      slideTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
-    slideTrack.style.transform = `translateX(-${index * 100}%)`;
-  }, 4000);
-</script>
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function previousSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+
+    // Auto-advance slides every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Add animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-up');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 
 </body>
 </html>
