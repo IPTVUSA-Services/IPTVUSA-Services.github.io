@@ -1,441 +1,279 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover the best IPTV provider USA offering HD & 4K channels, stable servers, and free trial access. Learn features, benefits, and FAQs about premium IPTV services.">
-  <meta name="keywords" content="best iptv provider usa, iptv services usa, iptv free trial, usa iptv, premium iptv">
-  <title>Best IPTV Provider USA | Premium Streaming Services</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <style>
-    @keyframes slideBackground {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Check, ShieldCheck, Zap, Monitor, Globe, Award } from 'lucide-react';
+import { plans, stats } from './constants';
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes slideInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes slideInRight {
-      from {
-        opacity: 0;
-        transform: translateX(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-
-    .animated-bg {
-      background: linear-gradient(-45deg, #1e40af, #3b82f6, #06b6d4, #0891b2);
-      background-size: 400% 400%;
-      animation: slideBackground 15s ease infinite;
-    }
-
-    .fade-in-up {
-      animation: fadeInUp 0.8s ease-out forwards;
-    }
-
-    .slide-in-left {
-      animation: slideInLeft 0.8s ease-out forwards;
-    }
-
-    .slide-in-right {
-      animation: slideInRight 0.8s ease-out forwards;
-    }
-
-    .pulse-animation {
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    .slider-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 1rem;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-    }
-
-    .slides {
-      display: flex;
-      transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-
-    .slide {
-      min-width: 100%;
-      position: relative;
-    }
-
-    .slide img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-    }
-
-    .faq-item {
-      transition: all 0.3s ease;
-    }
-
-    .faq-item:hover {
-      transform: translateX(10px);
-      background-color: #f0f9ff;
-    }
-
-    .cta-button {
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
-    }
-
-    .feature-card {
-      transition: all 0.3s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
-
-    .nav-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.9);
-      border: none;
-      padding: 1rem;
-      cursor: pointer;
-      z-index: 10;
-      border-radius: 50%;
-      transition: all 0.3s ease;
-    }
-
-    .nav-arrow:hover {
-      background: white;
-      transform: translateY(-50%) scale(1.1);
-    }
-
-    .nav-arrow.left { left: 20px; }
-    .nav-arrow.right { right: 20px; }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- Header Section with Animated Background -->
-  <header class="animated-bg text-white py-20 px-4">
-    <div class="max-w-6xl mx-auto text-center">
-      <h1 class="text-5xl md:text-6xl font-bold mb-4 fade-in-up">Best IPTV Provider USA</h1>
-      <p class="text-xl md:text-2xl mb-8 fade-in-up" style="animation-delay: 0.2s;">Premium Streaming • HD & 4K Quality • Free Trial Available</p>
-      <a href="https://xtremehdsiptv.org/" class="cta-button inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg fade-in-up" style="animation-delay: 0.4s;">
-        🎬 Start Free Trial Now
-      </a>
-    </div>
-
-    
-  </header>
-
-  <!-- Introduction Section -->
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <div class="slide-in-left">
-      <h2 class="text-4xl font-bold text-blue-700 mb-6">Why Choose the Best IPTV Provider USA?</h2>
-      <p class="text-lg mb-4 leading-relaxed">
-        Finding the <strong>best IPTV provider USA</strong> is crucial for viewers who demand uninterrupted access to live television, premium sports channels, blockbuster movies, and on-demand entertainment content. IPTV (Internet Protocol Television) technology revolutionizes how we consume media by delivering television content through internet protocols, providing unmatched flexibility, cost-effectiveness, and device compatibility compared to traditional cable and satellite services.
-      </p>
-      <p class="text-lg mb-4 leading-relaxed">
-        The <strong>best IPTV provider in the USA</strong> prioritizes exceptional server uptime, lightning-fast channel loading times, crystal-clear HD and 4K resolution streaming, and comprehensive support for popular devices including Smart TVs, Android smartphones and tablets, iOS devices, Amazon Firestick, MAG boxes, and desktop web browsers. With IPTV services, users gain instant access to thousands of domestic and international channels without being locked into long-term contracts or investing in expensive hardware equipment.
-      </p>
-      <p class="text-lg mb-6 leading-relaxed">
-        Modern IPTV services from the <strong>best IPTV provider USA</strong> offer advanced features such as electronic program guides (EPG), video-on-demand (VOD) libraries, catch-up TV functionality, multi-screen viewing, parental controls, and cloud DVR capabilities. This comprehensive feature set ensures that every household member can enjoy personalized entertainment experiences tailored to their preferences and schedules.
-      </p>
-    </div>
-
-    <!-- Image Slider -->
-    <div class="slider-container my-12 fade-in-up">
-      <button class="nav-arrow left" onclick="previousSlide()">❮</button>
-      <button class="nav-arrow right" onclick="nextSlide()">❯</button>
-      <div class="slides" id="slideTrack">
-        <div class="slide">
-          <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=500&fit=crop" alt="Best IPTV Provider USA - Premium Streaming">
-          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
-            <h3 class="text-white text-3xl font-bold">Premium IPTV Streaming</h3>
-          </div>
-        </div>
-        <div class="slide">
-          <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1200&h=500&fit=crop" alt="USA IPTV Channels - Live TV">
-          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
-            <h3 class="text-white text-3xl font-bold">Thousands of USA Channels</h3>
-          </div>
-        </div>
-        <div class="slide">
-          <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1200&h=500&fit=crop" alt="IPTV Free Trial - Test Our Service">
-          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
-            <h3 class="text-white text-3xl font-bold">Start Your Free Trial Today</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide-in-right">
-      <p class="text-lg mb-4 leading-relaxed">
-        A significant advantage of selecting the <strong>best IPTV provider USA</strong> is the unparalleled ability to customize your complete viewing experience. Whether you're passionate about live sports coverage including NFL, NBA, MLB, NHL, and international soccer leagues, enjoy premium entertainment networks, prefer international channels from around the globe, or need safe children's programming, IPTV services deliver diverse content libraries with regular updates and fresh additions.
-      </p>
-      <p class="text-lg mb-6 leading-relaxed">
-        Premium IPTV providers invest heavily in infrastructure to ensure minimal buffering, maximum uptime reliability, and exceptional customer support teams available 24/7 to assist with setup, troubleshooting, and general inquiries. The best providers also offer flexible subscription plans ranging from monthly to annual options, allowing customers to choose packages that fit their budget and viewing habits perfectly.
-      </p>
-    </div>
-
-    <div class="text-center my-12">
-      <a href="https://www.reviewstobuy.com/" class="cta-button inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-5 px-10 rounded-lg text-xl pulse-animation">
-        ⚡ Claim Your Free Trial Now
-      </a>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="bg-white py-16">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">What Makes Us the Best IPTV Provider USA?</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="feature-card bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
-          <div class="text-5xl mb-4">🎥</div>
-          <h3 class="text-2xl font-bold mb-3 text-blue-700">HD & 4K Quality</h3>
-          <p class="text-gray-700">Experience stunning picture quality with our HD, Full HD, and 4K streaming capabilities. Crystal-clear visuals for every channel and program.</p>
-        </div>
-        <div class="feature-card bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl">
-          <div class="text-5xl mb-4">📡</div>
-          <h3 class="text-2xl font-bold mb-3 text-green-700">Stable Servers</h3>
-          <p class="text-gray-700">99.9% uptime guarantee with high-performance servers strategically located across the USA for optimal streaming performance.</p>
-        </div>
-        <div class="feature-card bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl">
-          <div class="text-5xl mb-4">📱</div>
-          <h3 class="text-2xl font-bold mb-3 text-purple-700">Multi-Device Support</h3>
-          <p class="text-gray-700">Watch on Smart TVs, smartphones, tablets, Firestick, MAG boxes, and computers. One subscription, unlimited devices.</p>
-        </div>
-        <div class="feature-card bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-xl">
-          <div class="text-5xl mb-4">🌍</div>
-          <h3 class="text-2xl font-bold mb-3 text-orange-700">Global Content</h3>
-          <p class="text-gray-700">Access thousands of USA and international channels covering sports, news, entertainment, movies, and kids programming.</p>
-        </div>
-        <div class="feature-card bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-xl">
-          <div class="text-5xl mb-4">💰</div>
-          <h3 class="text-2xl font-bold mb-3 text-red-700">Affordable Pricing</h3>
-          <p class="text-gray-700">Flexible subscription plans with no hidden fees, no long-term contracts, and no expensive equipment rental charges.</p>
-        </div>
-        <div class="feature-card bg-gradient-to-br from-cyan-50 to-cyan-100 p-8 rounded-xl">
-          <div class="text-5xl mb-4">🎯</div>
-          <h3 class="text-2xl font-bold mb-3 text-cyan-700">Easy Setup</h3>
-          <p class="text-gray-700">Simple installation process with detailed guides and 24/7 customer support to get you streaming in minutes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits Section -->
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-4xl font-bold text-blue-700 mb-8">Benefits of Choosing the Best IPTV Provider USA</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <ul class="space-y-4 text-lg">
-        <li class="flex items-start">
-          <span class="text-green-500 text-2xl mr-3">✓</span>
-          <span>Unlimited access to premium USA and international channels</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-green-500 text-2xl mr-3">✓</span>
-          <span>No buffering with high-speed dedicated servers</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-green-500 text-2xl mr-3">✓</span>
-          <span>Watch live sports events in real-time HD quality</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-green-500 text-2xl mr-3">✓</span>
-          <span>Compatible with all major streaming devices</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-green-500 text-2xl mr-3">✓</span>
-          <span>Electronic program guide (EPG) for easy navigation</span>
-        </li>
-      </ul>
-      <ul class="space-y-4 text-lg">
-        <li class="flex items-start">
-          <span class="text-green-500 text-2xl mr-3">✓</span>
-          <span>Video-on-demand library with thousands of titles</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-green-500 text-2xl mr-3">✓</span>
-          <span>Catch-up TV to watch missed programs</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-green-500 text-2xl mr-3">✓</span>
-          <span>Multi-screen support for family viewing</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-green-500 text-2xl mr-3">✓</span>
-          <span>Parental controls for safe kids content</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-green-500 text-2xl mr-3">✓</span>
-          <span>24/7 customer support and technical assistance</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="bg-gradient-to-br from-blue-50 to-cyan-50 py-16" id="faq">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-blue-700 mb-12">Frequently Asked Questions (FAQ)</h2>
+export function App() {
+  return (
+    <div className="min-h-screen bg-[#0a0a0c] text-slate-200 font-sans selection:bg-blue-500/30">
       
-      <div class="space-y-4">
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-600 mb-2">What is IPTV and how does it work?</h3>
-          <p class="text-gray-700">
-            IPTV (Internet Protocol Television) is a modern technology that delivers television content over the internet instead of traditional cable or satellite signals. The <strong>best IPTV provider USA</strong> uses advanced streaming protocols to transmit live TV channels, on-demand videos, and interactive features directly to your devices through your internet connection. This allows for greater flexibility, better quality, and more features than conventional TV services.
-          </p>
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full z-50 bg-[#0a0a0c]/80 backdrop-blur-md border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-2 group cursor-pointer">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
+              <Zap className="text-white fill-white" size={24} />
+            </div>
+            <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+              IPTV<span className="text-blue-500">PRO</span> USA
+            </span>
+          </div>
+          
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+            <a href="#features" className="hover:text-white transition-colors">Features</a>
+            <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
+            <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+            <button className="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-full transition-all hover:shadow-lg hover:shadow-blue-500/20 active:scale-95">
+              Get Started
+            </button>
+          </div>
         </div>
+      </nav>
 
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-600 mb-2">Is IPTV legal in the United States?</h3>
-          <p class="text-gray-700">
-            Yes, IPTV technology itself is completely legal in the United States. However, it's crucial to choose reputable providers like the <strong>best IPTV provider USA</strong> that properly license their content and comply with copyright laws. Always verify that your IPTV service distributes content legally and has the necessary broadcasting rights for the channels they offer.
-          </p>
-        </div>
+      {/* Hero Section */}
+      <section className="relative pt-40 pb-20 px-4 overflow-hidden">
+        {/* Background Glows */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+        <div className="absolute top-40 right-0 w-[400px] h-[400px] bg-cyan-500/5 blur-[100px] rounded-full pointer-events-none -z-10" />
 
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-600 mb-2">Do you offer a free trial for IPTV services?</h3>
-          <p class="text-gray-700">
-            Absolutely! The <strong>best IPTV provider USA</strong> offers a comprehensive free trial period so potential customers can thoroughly test streaming quality, explore channel availability, verify device compatibility, and experience our premium features before committing to a subscription. This risk-free trial allows you to make an informed decision about our service quality.
-          </p>
-        </div>
+        <div className="max-w-5xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
+              <Award size={14} /> The #1 Rated Provider in USA
+            </span>
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+              Stream Everything. <br />
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+                No Limits, No Buffering.
+              </span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+              Experience ultra-high-definition streaming with 18,000+ live channels, 
+              60,000+ VODs, and exclusive sports coverage. All for the price of a single coffee.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button className="w-full sm:w-auto px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-bold text-lg transition-all shadow-xl shadow-blue-500/25 hover:-translate-y-1 active:scale-95">
+                Claim 24h Free Trial
+              </button>
+              <button className="w-full sm:w-auto px-10 py-5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl font-bold text-lg transition-all active:scale-95">
+                View Pricing
+              </button>
+            </div>
+          </motion.div>
 
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-600 mb-2">Which devices are compatible with your IPTV service?</h3>
-          <p class="text-gray-700">
-            Our IPTV service supports an extensive range of devices including Smart TVs (Samsung, LG, Sony), Android smartphones and tablets, iOS devices (iPhone, iPad), Amazon Firestick and Fire TV, MAG boxes, Android TV boxes, Windows and macOS computers, and web-based players accessible through modern browsers. One subscription works seamlessly across all your devices.
-          </p>
+          {/* Stats */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 py-12 border-y border-white/5"
+          >
+            {stats.map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-sm text-slate-500 uppercase tracking-widest">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
         </div>
+      </section>
 
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-600 mb-2">What internet speed do I need for IPTV streaming?</h3>
-          <p class="text-gray-700">
-            For optimal streaming experience with the <strong>best IPTV provider USA</strong>, we recommend a minimum internet speed of 10 Mbps for HD content and 25 Mbps or higher for 4K content. A stable connection is more important than peak speed – wired ethernet connections generally provide better stability than WiFi for consistent streaming quality.
-          </p>
-        </div>
+      {/* Features Grid */}
+      <section id="features" className="py-24 px-4 bg-white/[0.01]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Engineered for Performance</h2>
+            <p className="text-slate-400 max-w-xl mx-auto">Our infrastructure is built to handle massive loads, ensuring your stream never stops when the game gets intense.</p>
+          </div>
 
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-600 mb-2">How many devices can I use simultaneously?</h3>
-          <p class="text-gray-700">
-            Our subscription plans support multiple simultaneous connections, allowing different family members to watch different channels on separate devices at the same time. Specific connection limits depend on your chosen subscription tier, with premium plans offering unlimited concurrent streams throughout your household.
-          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <FeatureCard 
+              icon={<ShieldCheck className="text-emerald-400" size={32} />}
+              title="Anti-Freeze 5.0"
+              description="Our proprietary technology prevents buffering even on slower connections. Optimized for live events."
+            />
+            <FeatureCard 
+              icon={<Monitor className="text-blue-400" size={32} />}
+              title="4K HDR Support"
+              description="Crystal clear 4K resolution at 60FPS. Experience sports and movies like you're actually there."
+            />
+            <FeatureCard 
+              icon={<Globe className="text-cyan-400" size={32} />}
+              title="Global Network"
+              description="Servers distributed globally to provide the lowest latency regardless of your location."
+            />
+          </div>
         </div>
+      </section>
 
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-600 mb-2">What types of channels and content are available?</h3>
-          <p class="text-gray-700">
-            The <strong>best IPTV provider USA</strong> offers thousands of channels including live sports (NFL, NBA, MLB, NHL, UFC, international soccer), premium entertainment networks, news channels, movie channels, kids programming, international channels in multiple languages, and extensive video-on-demand libraries with the latest movies and TV series.
-          </p>
-        </div>
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 px-4 relative">
+        <div className="absolute top-1/2 left-0 w-full h-[500px] bg-blue-600/5 -skew-y-3 -z-10" />
+        
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Choose Your Plan</h2>
+            <p className="text-slate-400">Simple, transparent pricing for premium entertainment.</p>
+          </div>
 
-        <div class="faq-item bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold text-blue-600 mb-2">Is customer support available if I need help?</h3>
-          <p class="text-gray-700">
-            Yes! We provide 24/7 customer support through multiple channels including live chat, email, and ticket system. Our experienced technical team is always ready to assist with setup, troubleshooting, channel requests, billing questions, and any other concerns you may have about our IPTV service.
-          </p>
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {plans.map((plan) => (
+              <PricingCard key={plan.id} plan={plan} />
+            ))}
+          </div>
         </div>
+      </section>
+
+      {/* Trust Section (GitHub Style Activity Graph Mockup for Social Proof) */}
+      <section className="py-24 px-4">
+        <div className="max-w-5xl mx-auto bg-[#161b22] border border-[#30363d] rounded-2xl p-8 overflow-hidden">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-full bg-slate-700 overflow-hidden">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User" />
+            </div>
+            <div>
+              <div className="font-bold text-white">Service Health Dashboard</div>
+              <div className="text-sm text-slate-400">Real-time status of 24,000+ nodes</div>
+            </div>
+            <div className="ml-auto flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              All Systems Operational
+            </div>
+          </div>
+          
+          <div className="space-y-4">
+            <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
+              <span>9,421 checks in the last year</span>
+              <div className="flex items-center gap-4">
+                <span>Less</span>
+                <div className="flex gap-1">
+                  <div className="w-3 h-3 rounded-[2px] bg-[#0e1117]" />
+                  <div className="w-3 h-3 rounded-[2px] bg-[#0e4429]" />
+                  <div className="w-3 h-3 rounded-[2px] bg-[#006d32]" />
+                  <div className="w-3 h-3 rounded-[2px] bg-[#26a641]" />
+                  <div className="w-3 h-3 rounded-[2px] bg-[#39d353]" />
+                </div>
+                <span>More</span>
+              </div>
+            </div>
+            
+            {/* Mock Graph */}
+            <div className="flex gap-1 h-32 items-end">
+              {Array.from({ length: 50 }).map((_, i) => (
+                <div 
+                  key={i} 
+                  className="flex-1 rounded-t-sm bg-gradient-to-t from-blue-600/40 to-blue-400/80" 
+                  style={{ height: `${Math.random() * 80 + 20}%` }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/5 py-12 bg-black/50 backdrop-blur-xl">
+        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12">
+          <div className="col-span-2">
+             <div className="flex items-center gap-2 mb-6">
+                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <Zap className="text-white fill-white" size={18} />
+                </div>
+                <span className="text-lg font-bold tracking-tight text-white">
+                  IPTV<span className="text-blue-500">PRO</span> USA
+                </span>
+              </div>
+              <p className="text-slate-400 max-w-sm">
+                We provide the most reliable IPTV service in the USA, Canada, and UK. 
+                Join thousands of happy customers today.
+              </p>
+          </div>
+          <div>
+            <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-xs">Product</h4>
+            <ul className="space-y-4 text-sm text-slate-400">
+              <li><a href="#" className="hover:text-white transition-colors">Free Trial</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Channels List</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Tutorials</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-xs">Support</h4>
+            <ul className="space-y-4 text-sm text-slate-400">
+              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Refund Policy</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 mt-12 pt-12 border-t border-white/5 text-center text-sm text-slate-600">
+          © 2024 IPTV PRO USA. Not affiliated with any broadcast network.
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+function FeatureCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
+  return (
+    <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/5 hover:border-white/10 transition-all hover:-translate-y-2 group">
+      <div className="mb-6 p-3 w-fit rounded-2xl bg-white/[0.03] group-hover:scale-110 transition-transform">{icon}</div>
+      <h3 className="text-xl font-bold mb-3 text-white">{title}</h3>
+      <p className="text-slate-400 leading-relaxed text-sm">
+        {description}
+      </p>
+    </div>
+  );
+}
+
+function PricingCard({ plan }: { plan: typeof plans[0] }) {
+  return (
+    <div className={`relative p-8 rounded-[2.5rem] flex flex-col transition-all duration-500 hover:-translate-y-2 ${
+      plan.popular 
+        ? 'bg-gradient-to-b from-blue-600 to-blue-700 text-white shadow-2xl shadow-blue-600/20' 
+        : 'bg-[#121216] border border-white/5 text-slate-200 hover:border-white/20 shadow-xl'
+    }`}>
+      {plan.popular && (
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-cyan-400 text-blue-900 text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
+          Best Value Choice
+        </div>
+      )}
+      
+      <div className="mb-8">
+        <h3 className={`text-xl font-bold mb-1 ${plan.popular ? 'text-white' : 'text-white'}`}>{plan.name}</h3>
+        <p className={plan.popular ? 'text-blue-100' : 'text-slate-500'}>{plan.duration}</p>
       </div>
+
+      <div className="mb-8 flex items-baseline gap-1">
+        <span className="text-4xl font-black">$</span>
+        <span className="text-6xl font-black tracking-tight">{plan.price.split('.')[0]}</span>
+        <span className="text-2xl font-bold opacity-60">.{plan.price.split('.')[1]}</span>
+      </div>
+
+      <div className="space-y-4 mb-10 flex-grow">
+        {plan.features.map((feature, i) => (
+          <div key={i} className="flex items-center gap-3 text-sm">
+            <div className={`p-1 rounded-full ${plan.popular ? 'bg-white/20' : 'bg-blue-500/10'}`}>
+              <Check size={12} className={plan.popular ? 'text-white' : 'text-blue-400'} />
+            </div>
+            <span className={plan.popular ? 'text-blue-50' : 'text-slate-400'}>{feature}</span>
+          </div>
+        ))}
+      </div>
+
+      <button className={`w-full py-4 rounded-2xl font-bold text-lg transition-all active:scale-95 ${
+        plan.popular 
+          ? 'bg-white text-blue-600 hover:bg-slate-100' 
+          : 'bg-white/5 hover:bg-white/10 text-white border border-white/10'
+      }`}>
+        {plan.cta}
+      </button>
     </div>
-  </section>
-
-  <!-- Final CTA Section -->
-  <section class="animated-bg text-white py-16" id="free-trial">
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Experience the Best IPTV Provider USA?</h2>
-      <p class="text-xl mb-8">Join thousands of satisfied customers enjoying premium IPTV streaming. Start your free trial today with no credit card required!</p>
-      <a href="https://www.bestiptv26.com/" class="cta-button inline-block bg-white text-blue-600 hover:text-blue-700 font-bold py-5 px-12 rounded-lg text-xl">
-        🚀 Start Your Free Trial Now
-      </a>
-      <p class="mt-6 text-lg">No commitment • Cancel anytime • 24/7 Support</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-8">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <p class="mb-2">&copy; 2024 IPTVUSA-Services. All Rights Reserved.</p>
-      <p class="text-gray-400">Best IPTV Provider USA | Premium Streaming Services</p>
-    </div>
-  </footer>
-
-  <!-- Slider JavaScript -->
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const slideTrack = document.getElementById('slideTrack');
-    const totalSlides = slides.length;
-
-    function updateSlide() {
-      slideTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateSlide();
-    }
-
-    function previousSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateSlide();
-    }
-
-    // Auto-advance slides every 5 seconds
-    setInterval(nextSlide, 5000);
-
-    // Add animation on scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in-up');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section);
-    });
-  </script>
-
-</body>
-</html>
+  );
+}
